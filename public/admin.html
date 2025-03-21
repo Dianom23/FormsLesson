@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Панель администратора</h1>
+            <nav class="navigation">
+                <a href="home.html" class="nav-btn">Список пользователей</a>
+                <a href="index.html" class="nav-btn">Форма регистрации</a>
+            </nav>
+        </header>
+        
+        <div class="admin-panel">
+            <div class="panel-section">
+                <h2>Управление пользователями</h2>
+                <div class="stats" id="userStats">
+                    <div class="loading" id="loading">Загрузка данных...</div>
+                    <div class="stat-item">
+                        <span class="stat-label">Всего пользователей:</span>
+                        <span class="stat-value" id="totalUsers">-</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button id="deleteAllBtn" class="danger-btn">Удалить всех пользователей</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="error" class="error"></div>
+        <div id="success" class="success"></div>
+    </div>
+    <script src="admin-script.js"></script>
+</body>
+</html> 

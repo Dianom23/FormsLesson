@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список пользователей</title>
+    <link rel="stylesheet" href="home-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Список зарегистрированных пользователей</h1>
+
+        </header>
+        
+        <div class="users-container">
+            <div class="loading" id="loading">Загрузка данных...</div>
+            <div id="error" class="error"></div>
+            <table id="usersTable" class="users-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ФИО</th>
+                        <th>Email</th>
+                        <th>Дата регистрации</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                    <!-- Данные будут добавлены с помощью JavaScript -->
+                </tbody>
+            </table>
+            <div id="noUsers" class="no-users">Нет зарегистрированных пользователей</div>
+        </div>
+    </div>
+    <script src="home-script.js"></script>
+</body>
+</html> 
