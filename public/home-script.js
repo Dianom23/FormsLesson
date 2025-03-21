@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Загрузка списка пользователей с сервера
     function loadUsers() {
-        fetch('http://localhost:3000/get_users')
+        fetch('get_users')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Ошибка при получении данных');
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (deleteAllBtn) {
         deleteAllBtn.addEventListener('click', function() {
             if (confirm('Вы уверены, что хотите удалить ВСЕХ пользователей?')) {
-                fetch('http://localhost:3000/users', {
+                fetch('users', {
                     method: 'DELETE'
                 })
                 .then(response => {

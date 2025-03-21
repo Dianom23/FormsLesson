@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Загрузка статистики пользователей
     function loadUserStats() {
-        fetch('http://localhost:3000/get_users')
+        fetch('get_users')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Ошибка при получении данных');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 successElement.style.display = 'none';
                 errorElement.style.display = 'none';
                 
-                fetch('http://localhost:3000/users', {
+                fetch('users', {
                     method: 'DELETE'
                 })
                 .then(response => {
